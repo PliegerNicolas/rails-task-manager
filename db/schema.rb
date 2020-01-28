@@ -10,9 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_28_192609) do
+ActiveRecord::Schema.define(version: 2020_01_28_190558) do
 
-# Could not dump table "tasks" because of following StandardError
-#   Unknown type 'false' for column 'completed'
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.text "details"
+    t.boolean "completed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
