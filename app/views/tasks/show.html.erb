@@ -1,0 +1,17 @@
+<div class="page">
+  <h1><%= @task.title %></h1>
+  <div class="details bag"><%= @task.details %></div>
+  <div class="task bag">
+    <% if @task.completed == true %>
+      <div class="checker-box">
+        <input type="checkbox" name="task-check" <%= "id=#{@task.id}" %> checked><p>This task is completed.</p>
+      </div>
+      <% else %>
+      <div class="checker-box">
+        <input type="checkbox" name="task-check" <%= "id=#{@task.id}" %>><p>This task isn't completed yet.</p>
+    </div>
+    <% end %>
+  </div>
+
+  <%= link_to "Go back to Tasks page", tasks_path %>
+</div>
