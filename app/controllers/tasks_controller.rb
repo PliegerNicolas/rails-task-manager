@@ -13,8 +13,18 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
+    @task_created = Task.create(task_params) unless params[:task][:title] == ''
     redirect_to tasks_path
+  end
+
+  def delete
+    id = params[:id]
+    @task_deleted = Task.delete(id)
+    redirect_to tasks_path
+  end
+
+  def update
+    raise
   end
 
   private

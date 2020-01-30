@@ -4,11 +4,11 @@
   <div class="task bag">
     <% if @task.completed == true %>
       <div class="checker-box">
-        <input type="checkbox" name="task-check" <%= "id=#{@task.id}" %> checked><p>This task is completed.</p>
+        <i class="fa fa-check task-checker"></i><p>This task is completed.</p>
       </div>
       <% else %>
       <div class="checker-box">
-        <input type="checkbox" name="task-check" <%= "id=#{@task.id}" %>><p>This task isn't completed yet.</p>
+         <i class="fa fa-times task-checker"></i><p>This task isn't completed yet.</p>
     </div>
     <% end %>
   </div>

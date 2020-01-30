@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'font-awesome';
+
+/* ------------------------ */
+
 .page {
   display: flex;
   justify-content: center;
@@ -17,9 +21,30 @@ hr{
   margin-bottom: 30px;
 }
 
+.task-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
 .task, .bag, .checker-box {
   display: inline-flex;
   align-items: center;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right-hand-icones {
+  display: flex;
+  flex-direction: row;
+}
+
+.task a {
+  margin: 0 5px;
 }
 
 .bag {
@@ -59,9 +84,6 @@ p {
   transition: 0.3s;
 }
 
-.form-task-create {
-}
-
 .form-task-create label {
   margin-top: 12px;
   margin-bottom: 6px;
@@ -93,4 +115,20 @@ p {
   opacity: .6;
   border: 2px solid #F8F8F8;
   transition: 0.2s;
+}
+
+.task-checker {
+  padding: 2px 4px;
+  margin-right: 2px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.fa {
+  color: #6084b3;
+}
+
+.fa:hover {
+  color: red;
+  transition: .4s;
 }
