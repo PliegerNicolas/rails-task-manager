@@ -2,33 +2,23 @@
 <div class="page">
   <h1>My Tasks</h1>
 
-  <div class="task-list">
+  <div class="task-list">                    <!-- list -->
     <% @tasks.each do |task| %>
     <div class="task">
 
-      <div class="task-checker">
+      <div class="click-box">                  <!-- checker -->
         <% if task.completed == true %>
-          <%= link_to update_path(task) do %>
-            <i class="fa fa-check"></i>
-          <% end %>
+          <i class="fa fa-check"></i>
         <% else %>
-          <%= link_to update_path(task) do %>
-            <i class="fa fa-times"></i>
-          <% end %>
+          <i class="fa fa-times"></i>
         <% end %>
       </div>
 
-      <div class="task-title">
+      <div class="task-title">                  <!-- name -->
         <%= link_to "#{task.title}", show_path(task) %>
       </div>
 
-      <div class="right-hand-icones">
-        <div class="trash">
-          <%= link_to update_path(task) do %>
-          <i class="fa fa-edit"></i>
-          <% end %>
-        </div>
-
+      <div class="click-box">                     <!-- trash icone -->
          <div class="trash">
           <%= link_to delete_path(task), method: :delete do %>
             <i class="fa fa-trash"></i>

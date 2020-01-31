@@ -24,7 +24,11 @@ class TasksController < ApplicationController
   end
 
   def update
-    raise
+    id = params[:id]
+    @task_update = Task.find(id)
+  end
+
+  def update_action
   end
 
   private

@@ -1,15 +1,15 @@
 <div class="page">
 
-  <h1>Update Task</h1>
+  <h1>Update : <%= @task_update.title %></h1>
 
-  <%= form_for @task, html: { class: "form-task-create page" } do |f| %>
+  <%= form_for update_action_path(@task_update), html: { class: "page" } do |f| %>
   <%= f.label "Title" %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, value: @task_update.title %>
   <%= f.label "Details" %>
-  <%= f.text_field :details %>
+  <%= f.text_field :details, value: @task_update.details %>
   <%= f.submit "Update Task", class: "button" %>
   <% end %>
-  <%= link_to "Go back to Tasks page", tasks_path %>
+  <%= link_to "Go back to show page", show_path, class: "button" %>
 
 
 </div>

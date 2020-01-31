@@ -1,17 +1,36 @@
 <div class="page">
   <h1><%= @task.title %></h1>
-  <div class="details bag"><%= @task.details %></div>
-  <div class="task bag">
-    <% if @task.completed == true %>
-      <div class="checker-box">
-        <i class="fa fa-check task-checker"></i><p>This task is completed.</p>
-      </div>
-      <% else %>
-      <div class="checker-box">
-         <i class="fa fa-times task-checker"></i><p>This task isn't completed yet.</p>
-    </div>
-    <% end %>
-  </div>
 
-  <%= link_to "Go back to Tasks page", tasks_path %>
+  <div class="information">
+
+    <p class="description-title ">Description</p>
+    <hr>
+    <div class="description">
+      <%= @task.details %>
+    </div>
+      <hr>
+    <div class="interaction-box">
+      <% if @task.completed == true %>
+        <div class="check-box">
+          <!--<%= link_to tasks_path do %>-->
+            <i class="fa fa-check task-visual"></i>
+          <!--<% end %>-->
+      <% else %>
+        <div class="check-box">
+          <!--<%= link_to tasks_path do %>-->
+            <i class="fa fa-times task-visual"></i>
+          <!--<% end %>-->
+      <% end %>
+
+        <div class="edit-box">
+          <%= link_to update_path(@task) do %>
+            <i class="fa fa-edit task-visual"></i>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <%= link_to "Go back to Tasks page", tasks_path, class: "button" %>
 </div>
