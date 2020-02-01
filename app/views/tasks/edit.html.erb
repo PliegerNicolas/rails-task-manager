@@ -1,0 +1,8 @@
+<div class="page">
+  <%= render 'form', task: @task %>
+
+  <hr>
+  <%= link_to task_path(@task) do %>
+    <i class="fa fa-history"></i> Back to Task page
+  <% end %>
+</div>
