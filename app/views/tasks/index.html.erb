@@ -1,21 +1,23 @@
 <div class="page">
-  <ul id="tasks">
+  <h1>My Tasks</h1>
+
+  <ul id="tasks-list container">
     <% @tasks.each do |task| %>
-      <li>
+      <li class="task">
         <% if task.completed %>
-          <i class="fa fa-check"></i>
+          <i class="fa fa-check task-checker"></i>
         <% else %>
-          <i class="fa fa-times"></i>
+          <i class="fa fa-times task-checker"></i>
         <% end %>
-        <%= link_to task.title, task_path(task.id) %>
-        <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
-          <i class="fa fa-trash"></i>
+        <%= link_to task.title, task_path(task.id), class: 'task-title' %>
+        <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" }, class: 'trash-icon' do %>
+          <i class="fa fa-trash trash fa-hover"></i>
         <% end %>
       </li>
     <% end %>
   </ul>
 
-  <hr>
+  <hr class="hr-bottom-container">
 
     <%= link_to "Add a new task", new_task_path, class: "button" %>
 </div>

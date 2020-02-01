@@ -13,7 +13,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(task_params)
+    task = Task.new(task_params)
+    task.save unless task[:title].empty?
+    redirect_to tasks_path
   end
 
   def edit
@@ -36,7 +38,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
 

@@ -7,6 +7,7 @@
 /* ------------------------ */
 
 $text-blue-color: #6084b3;
+$back-ground-color: #F2F2F2;
 
 .page {
   display: flex;
@@ -14,6 +15,156 @@ $text-blue-color: #6084b3;
   align-items: center;
   flex-direction: column;
 }
+
+h1 {
+  color: $text-blue-color;
+  font-size: 40px;
+  width: 70%;
+  text-align: center;
+}
+
+input {
+  cursor: pointer;
+}
+
+a,.description-title {
+  text-decoration: none;
+  color: $text-blue-color;
+  padding: 2px 0;
+  font-size: 18px;
+  font-weight: 600px;
+}
+
+label {
+  color: $text-blue-color;
+  font-size: 17px;
+  padding: 4px 40px;
+}
+
+hr{
+  opacity: .6;
+  align: center;
+  width: 60%;
+}
+
+.hr-bottom-container {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.button {
+  margin: 10px 10px;
+  padding: 8px 12px;
+  color: #6084b3;
+  border: 1px solid #E2E4F0;
+  background-color: $back-ground-color;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: 1.4s;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button:hover {
+  background-color: #D2E4F0;
+  transition: 0.6s;
+}
+
+.container {
+  background-color: $back-ground-color;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  .task-title {
+    margin: 5px 5px;
+    width: 300px;
+    text-align: center;
+  }
+}
+
+.trash,.task-checker,.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3px 3px;
+  height: 22px;
+  width: 22px;
+  background-color: transparent;
+  border: 1px solid #E2E4F0;
+  border-radius: 6px;
+  background-color: #D2E4F0;
+  transition: 1.4s;
+  a {
+    padding: 0;
+  }
+}
+
+.trash:hover {
+  background-color: #E8E8F8;
+  transition: .6s;
+}
+
+.fa {
+  color: #6084b3;
+  transition: 1.2s;
+}
+
+.fa-hover:hover {
+  color: #2F2F2F;
+  opacity: .7;
+  transition: .4s;
+}
+
+/* ---- */
+
+.information {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.click-box-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.task-checker-big {
+  height: 32px;
+  width: 32px;
+}
+
+.description-title {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* ---- */
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group,form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
 
 h1 {
   color: $text-blue-color;
@@ -40,17 +191,6 @@ hr{
   width: 60%;
   margin-top: 30px;
   margin-bottom: 10px;
-}
-
-.task-list {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-
-  background-color: #F2F2F2;
-  padding: 30px 20px;
-  border-radius: 8px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
 }
 
 .task {
@@ -94,23 +234,6 @@ hr{
   transition: .4s;
 }
 
-.button {
-  margin: 10px 10px;
-  padding: 8px 12px;
-  color: #6084b3;
-  border: 1px solid #E2E4F0;
-  background-color: #F2F2F2;
-  border-radius: 4px;
-  font-size: 18px;
-  transition: 1.4s;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 12px 0 rgba(0, 0, 0, 0.12);
-}
-
-.button:hover {
-  background-color: #D2E4F0;
-  transition: 0.6s;
-}
-
 .form-task-create > input[type="text"] {
   width: 80em;
   padding: 22px 30px;
@@ -127,9 +250,11 @@ hr{
   transition: 0.2s;
 }
 
+*/
+
 /* ------ */
 
-
+/*
 .information {
   display: flex;
   align-items: center;
@@ -174,3 +299,5 @@ hr{
 .lowest-hr-show {
   padding: 0;
 }
+
+*/
